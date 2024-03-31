@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/pozicijaFragment">
+
+    <fragment
+        android:id="@+id/pozicijaFragment"
+        android:name="com.example.zadatak_praksa_android.ui.view.PozicijaFragment"
+        android:label="Otvorene pozicije"
+        tools:layout="@layout/fragment_pozicija">
+        <action
+            android:id="@+id/action_pozicijaFragment_to_detaljiPozicijeFragment"
+            app:destination="@id/detaljiPozicijeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detaljiPozicijeFragment"
+        android:name="com.example.zadatak_praksa_android.ui.view.DetaljiPozicijeFragment"
+        android:label="Detalji pozicije"
+        tools:layout="@layout/fragment_detalji_pozicije">
+        <argument
+            android:name="pozicija"
+            app:argType="com.example.zadatak_praksa_android.entities.Pozicija"
+            app:nullable="true" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
