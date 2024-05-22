@@ -14,7 +14,7 @@ You can see open job position and job details.
 
 ## Technologies
 * Kotlin programming language
-* Android sudio
+* Android studio
 * MVVM pattern
 * Ktor rest api client library
 * Epoxy
